@@ -12,4 +12,9 @@ public class AdminController {
     public String getAdminDashboard() {
         return "Welcome to the Admin Dashboard!";
     }
+
+    @GetMapping("/settings")
+    public String getAdminSettings() {
+        return "Admin Settings Page";
+    }
 }
