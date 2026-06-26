@@ -4,3 +4,5 @@ spring:
       servicebus:
         namespace: shaik-exchanges
         entity-type: queue
+    credential:
+      managed-identity-enabled: true
