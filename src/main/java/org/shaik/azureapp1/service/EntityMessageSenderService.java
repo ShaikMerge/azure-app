@@ -13,9 +13,13 @@ public class EntityMessageSenderService {
     @Autowired
     private ServiceBusTemplate serviceBusTemplate;
 
+    @Value("${queue-name}")
+    private String queueName;
+
+
 
     public void sendMessageToServiceBus(String message) {
-        serviceBusTemplate.send("${queue-name}", MessageBuilder.withPayload(message).build());
-        System.out.println("Sent message to Service Busssss: " + message);
+        serviceBusTemplate.send(queueName, MessageBuilder.withPayload(message).build());
+        System.out.println("Sent message to Service Bus: " + message);
     }
 }
