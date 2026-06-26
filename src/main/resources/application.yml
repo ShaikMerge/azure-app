@@ -3,15 +3,11 @@ spring:
     azure:
       credential:
         managed-identity-enabled: true
-
       keyvault:
         secret:
           property-sources:
             - endpoint: https://shaik-exchange-key-valut.vault.azure.net/
-
       servicebus:
         namespace: shaik-exchanges
         entity-type: queue
 
-#queue:
-#  name: ${queue-name}

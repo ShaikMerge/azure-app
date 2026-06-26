@@ -12,15 +12,10 @@ public class EntityMessageSenderService {
 
     @Autowired
     private ServiceBusTemplate serviceBusTemplate;
-    @Value("${queue-name}")
-    private String getQueueName;
-
-    private static final String QUEUE_NAME = "shaik-exchange-dev";
 
 
     public void sendMessageToServiceBus(String message) {
-        serviceBusTemplate.send(QUEUE_NAME, MessageBuilder.withPayload(message).build());
-        System.out.println("QUEUE-NAME FROM SECRETS: " + getQueueName);
-        System.out.println("Sent message to Service Bus: " + message);
+        serviceBusTemplate.send("${queue-name}", MessageBuilder.withPayload(message).build());
+        System.out.println("Sent message to Service Busssss: " + message);
     }
 }
