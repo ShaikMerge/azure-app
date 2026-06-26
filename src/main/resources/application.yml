@@ -1,0 +1,6 @@
+spring:
+  cloud:
+    azure:
+      servicebus:
+        namespace: shaik-exchanges
+        entity-type: queue
