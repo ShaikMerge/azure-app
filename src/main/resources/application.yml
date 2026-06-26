@@ -9,7 +9,3 @@ spring:
     keyvault:
       secret:
         endpoint: https://shaik-exchange-key-valut.vault.azure.net/
-
-
-queue:
-  name: ${queue-name}
