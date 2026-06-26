@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class EntityProcessingListner {
 
-    @ServiceBusListener(destination = "${queue.name}")
+    @ServiceBusListener(destination = "${queue-name}")
     public void handleMessageFromServiceBus(String message) {
         System.out.println("Received message from Service Bus: " + message);
     }
