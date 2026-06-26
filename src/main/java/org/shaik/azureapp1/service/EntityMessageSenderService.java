@@ -12,7 +12,7 @@ public class EntityMessageSenderService {
     private ServiceBusTemplate serviceBusTemplate;
 
     public void sendMessageToServiceBus(String message) {
-        serviceBusTemplate.send("${queue-name}", MessageBuilder.withPayload(message).build());
+        serviceBusTemplate.send("${queue.name}", MessageBuilder.withPayload(message).build());
         System.out.println("Sent message to Service Bus: " + message);
     }
 }

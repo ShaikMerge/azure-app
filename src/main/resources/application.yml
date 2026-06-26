@@ -6,3 +6,6 @@ spring:
         entity-type: queue
     credential:
       managed-identity-enabled: true
+
+queue:
+  name: ${queue-name}
