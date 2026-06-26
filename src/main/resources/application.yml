@@ -8,4 +8,8 @@ spring:
       managed-identity-enabled: true
     keyvault:
       secret:
-        endpoint: https://shaik-exchange-key-valut.vault.azure.net/
+        property-sources[0]:
+          endpoint : https://shaik-exchange-key-valut.vault.azure.net/
+
+queue:
+  name: ${queue-name}
