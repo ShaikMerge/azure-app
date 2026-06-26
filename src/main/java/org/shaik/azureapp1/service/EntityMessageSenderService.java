@@ -10,11 +10,9 @@ public class EntityMessageSenderService {
 
     @Autowired
     private ServiceBusTemplate serviceBusTemplate;
-    private static final String QUEUE_NAME = "shaik-exchange-dev";
-
 
     public void sendMessageToServiceBus(String message) {
-        serviceBusTemplate.send("shaik-exchange-dev", MessageBuilder.withPayload(message).build());
+        serviceBusTemplate.send("${queue.name}", MessageBuilder.withPayload(message).build());
         System.out.println("Sent message to Service Bus: " + message);
     }
 }
