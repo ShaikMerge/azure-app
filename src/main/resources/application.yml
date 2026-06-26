@@ -6,6 +6,10 @@ spring:
         entity-type: queue
     credential:
       managed-identity-enabled: true
+    keyvault:
+      secret:
+        endpoint: https://shaik-exchange-key-valut.vault.azure.net/
+
 
 queue:
   name: ${queue-name}
