@@ -12,7 +12,7 @@ public class EntityMessageSenderService {
 
     @Autowired
     private ServiceBusTemplate serviceBusTemplate;
-    @Value("${queue.name}")
+    @Value("${queue-name}")
     private String getQueueName;
 
     private static final String QUEUE_NAME = "shaik-exchange-dev";

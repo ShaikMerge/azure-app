@@ -13,5 +13,5 @@ spring:
         namespace: shaik-exchanges
         entity-type: queue
 
-queue:
-  name: ${queue-name}
+#queue:
+#  name: ${queue-name}
